@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Object</title>
+    
+     <script>
+    var robin = {
+        name: "TestPerson",
+        age: 12,
+        home: "Woonsocket",
+        score: 55,
+        goal: 75,
+        interests: ["books", "dogs", "science"],
+    
+    pointsneeded: function() {
+        return this.goal - this.score;
+    }   
+        
+    };  
+    
+    function tah () {
+    document.getElementById('name').innerHTML = robin.name;
+    document.getElementById('age').innerHTML += robin.age;
+    document.getElementById('score').innerHTML += robin.score;
+    document.getElementById('goal').innerHTML += robin.goal;
+    document.getElementById('remain').innerHTML = robin.pointsneeded();
+    };
+    
+    </script>
+</head>
+
+<body>
+    <h1>Test object</h1>
+    <h3 id="name"></h3>
+    <p id="age">Age: </p>
+    <p id="goal">Goal: </p>
+    <p id="score">Score: </p>
+    <h3>Points remaining</h3>
+    <p id="remain"></p>
+    <button onclick="tah()">Click for info</button>
+    
+    
+   
+</body>
+</html>
